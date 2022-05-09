@@ -1,0 +1,8 @@
+﻿-- abrir el cmd y ubicar en el installutil
+cd C:\Windows\Microsoft.NET\Framework\v4.0.30319
+
+-instalar
+InstallUtil "C:\ServiceSiasoft\ServiceBackUpSiasoft.exe"
+
+-desinstalar
+InstallUtil "C:\ServiceSiasoft\ServiceBackUpSiasoft.exe" /u
