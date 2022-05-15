@@ -90,7 +90,6 @@ namespace ServiceBackUpSiasoft
         {
             try
             {
-
                 Message("INICIO LA COMPRESION ZIP");
                 var ZipBackUp = Task.Factory.StartNew(() => IniZip());
                 await ZipBackUp;
@@ -115,8 +114,7 @@ namespace ServiceBackUpSiasoft
                         }                      
                     }
 
-                }
-               
+                }               
                 Message("FINALIZO PROCESO DEL SERVICIO");
             }
             catch (Exception w)
@@ -124,7 +122,6 @@ namespace ServiceBackUpSiasoft
                 Message("error al ejecutar Timer_Elapsed():" + w, EventLogEntryType.Error);
             }
         }
-
 
         #region LOGIC EVENTS
 
