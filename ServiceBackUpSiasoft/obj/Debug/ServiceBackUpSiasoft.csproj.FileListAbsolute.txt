@@ -36,3 +36,5 @@ D:\Empresas\otros\ServiceBackUpSiasoft\ServiceBackUpSiasoft\obj\Debug\ServiceBac
 D:\Empresas\otros\ServiceBackUpSiasoft\ServiceBackUpSiasoft\obj\Debug\ServiceBackUpSiasoft.csproj.CopyComplete
 D:\Empresas\otros\ServiceBackUpSiasoft\ServiceBackUpSiasoft\obj\Debug\ServiceBackUpSiasoft.exe
 D:\Empresas\otros\ServiceBackUpSiasoft\ServiceBackUpSiasoft\obj\Debug\ServiceBackUpSiasoft.pdb
+D:\Empresas\otros\ServiceBackUpSiasoft\ServiceBackUpSiasoft\bin\Debug\System.IO.Hashing.dll
+D:\Empresas\otros\ServiceBackUpSiasoft\ServiceBackUpSiasoft\bin\Debug\System.IO.Hashing.xml

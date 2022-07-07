@@ -156,9 +156,9 @@ namespace ServiceBackUpSiasoft
         {
             try
             {
-                BlobServiceClient blobServiceClient = new BlobServiceClient(AzureCnBlob);
+                BlobServiceClient blobServiceClient = new BlobServiceClient(AzureCnBlob);                
                 BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient(ContainerAzureBlob);
-
+                
                 DirectoryInfo d = new DirectoryInfo(PathBackUp);
                 FileInfo[] Files = d.GetFiles("*.zip");
                 foreach (FileInfo file in Files)
