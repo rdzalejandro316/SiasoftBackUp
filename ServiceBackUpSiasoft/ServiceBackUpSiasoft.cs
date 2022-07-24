@@ -1,4 +1,6 @@
-﻿using Azure.Storage.Blobs;
+﻿using Azure.Storage;
+using Azure.Storage.Blobs;
+using Azure.Storage.Blobs.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -155,7 +157,15 @@ namespace ServiceBackUpSiasoft
             {
                 BlobServiceClient blobServiceClient = new BlobServiceClient(AzureCnBlob);                
                 BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient(ContainerAzureBlob);
-                
+                BlobUploadOptions upOptions = new BlobUploadOptions
+                {
+                    TransferOptions = new StorageTransferOptions
+                    {
+                        MaximumTransferSize = 4 * 1024 * 1024,
+                        InitialTransferSize = 4 * 1024 * 1024
+                    }
+                };
+
                 DirectoryInfo d = new DirectoryInfo(PathBackUp);
                 FileInfo[] Files = d.GetFiles("*.zip");
                 foreach (FileInfo file in Files)
@@ -167,7 +177,7 @@ namespace ServiceBackUpSiasoft
                     BlobClient blobClient = containerClient.GetBlobClient(name);
                     using (var fileStream = System.IO.File.OpenRead(paths))
                     {
-                        await blobClient.UploadAsync(fileStream, true);
+                        await blobClient.UploadAsync(fileStream, upOptions);
                     }
                 }
 
